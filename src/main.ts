@@ -96,7 +96,7 @@ class LinkedList<T> {
 
     draw(p5: P5) {
         if (this.head) {
-            this.head.draw(p5, 10, 10);
+            this.head.draw(p5, 10, p5.height / 2);
         }
     }
 }
@@ -105,7 +105,7 @@ function sketch(p5: P5) {
     let list = new LinkedList<number>();
 
     function setup() {
-        const canvas = p5.createCanvas(800, 600);
+        const canvas = p5.createCanvas(1000, 600);
         canvas.parent('app');
 
         list.add(0, 5);
